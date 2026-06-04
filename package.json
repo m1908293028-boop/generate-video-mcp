@@ -1,0 +1,54 @@
+{
+  "name": "generate-video-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Agnes AI video generation",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "generate-video-mcp": "dist/server.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "video-generation",
+    "agnes",
+    "ai",
+    "opencode"
+  ],
+  "author": "m1908293028-boop",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m1908293028-boop/generate-video-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/m1908293028-boop/generate-video-mcp/issues"
+  },
+  "homepage": "https://github.com/m1908293028-boop/generate-video-mcp#readme",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.8",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "tsx": "^4.19.0",
+    "@types/node": "^22.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    ".env.example",
+    "LICENSE"
+  ]
+}
